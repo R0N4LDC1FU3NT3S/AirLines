@@ -1,0 +1,141 @@
+.container-header-img {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.header-img {
+	width: 80px;
+	margin-bottom: 30px;
+}
+
+.AirLines {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0px 30px;
+	min-height: 100vh;
+	--to: #db2777;
+	--stops: #fb923c, var(--to, rgba(251, 146, 60, 0));
+	--shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	background-image: linear-gradient(to bottom right, var(--stops));
+	h1 {
+		text-align: center;
+		color: white;
+		padding: 50px;
+		max-width: 800px;
+		font-size: 36px;
+	}
+}
+
+.AirLines-container {
+	background-color: white;
+	border: 2px solid white;
+	border-radius: 20px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	color: gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 60px 68px 40px;
+	width: 440px;
+	// min-height: 500px;
+}
+
+.AirLines-container-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.AirLines-container-form label {
+	font-size: 14px;
+}
+
+.AirLines-container-remember-me {
+	color: gray;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.AirLines-container-remember-me a {
+	color: gray;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.AirLines-container-remember-me a:hover {
+	text-decoration: underline;
+}
+
+.AirLines-container-social-media > div {
+	align-items: center;
+	display: flex;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.AirLines-container-social-media > div > img {
+	margin-right: 10px;
+	width: 30px;
+}
+
+.AirLines-container-register {
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.AirLines-container-register a {
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.AirLines-container-register a:hover {
+	text-decoration: underline;
+}
+
+.input {
+	background-color: transparent;
+	border-bottom: 2px solid gray;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	color: black;
+	font-family: "Nunito", sans-serif;
+	font-size: 16px;
+	height: 50px;
+	margin-bottom: 20px;
+	outline: none;
+	padding: 0px 20px;
+}
+
+::placeholder {
+	color: gray;
+}
+
+.button {
+	background-color: #fb923c;
+	border: none;
+	border-radius: 25px;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Nunito", sans-serif;
+	height: 50px;
+	letter-spacing: 1px;
+	margin: 10px 0px;
+}
+
+@media only screen and (max-width: 920px) {
+	.AirLines-container {
+		background-color: white;
+		border: none;
+		box-shadow: none;
+		padding: 60px 68px 40px;
+		width: 100%;
+	}
+}
