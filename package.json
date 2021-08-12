@@ -10,7 +10,8 @@
 		"lint": "eslint src --fix",
 		"build": "webpack --config webpack/prod.js",
 		"start": "webpack serve --config webpack/dev.js",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"resolve": "npx npm-force-resolutions"
 	},
 	"keywords": [],
 	"author": "Ronald Cifuentes <ronald.cifuentes2020@gmail.com>",
@@ -54,7 +55,7 @@
 		"@fortawesome/fontawesome-svg-core": "^1.2.36",
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@fortawesome/react-fontawesome": "^0.1.15",
-		"@svgr/webpack": "^5.5.0",
+		"@svgr/webpack": "^3.1.0",
 		"concurrently": "^6.2.1",
 		"core-js": "^3.15.2",
 		"dotenv": "^10.0.0",
@@ -70,5 +71,8 @@
 		"sweetalert2": "^11.1.2",
 		"thunk": "^0.0.1",
 		"webpack-merge": "^5.8.0"
+	},
+	"resolutions": {
+		"nth-check": "2.0.1"
 	}
 }

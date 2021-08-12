@@ -1,4 +1,15 @@
 # Get Started 🚀
+
+```
+           _      _      _                 
+     /\   (_)    | |    (_)                
+    /  \   _ _ __| |     _ _ __   ___  ___ 
+   / /\ \ | | '__| |    | | '_ \ / _ \/ __|
+  / ____ \| | |  | |____| | | | |  __/\__ \
+ /_/    \_\_|_|  |______|_|_| |_|\___||___/
+
+```
+
 ## Deploy In:
 https://air-lines.vercel.app/#/
 
@@ -7,6 +18,10 @@ Download the project with
 ### `git clone https://github.com/R0N4LDC1FU3NT3S/AirLines.git`
 
 run the following command to launch locally in development mode
+
+### `npm install`
+
+and
 
 ### `npm start`
 
@@ -51,8 +66,7 @@ this file will be in charge of creating the image and mounting it for you
 
 
 ## Project Structure
-```
-.
+```                                          
 ├── build.sh
 ├── dist
 ├── Dockerfile
