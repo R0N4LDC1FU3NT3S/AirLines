@@ -23,4 +23,11 @@ const SelectField = ({ name, onChange, onBlur, defaultValue = " -- select an opt
 	)
 }
 
+SelectField.propTypes = {
+	name: PropTypes.any,
+	onChange: PropTypes.any,
+	onBlur: PropTypes.any,
+	defaultValue: PropTypes.any
+}
+
 export default SelectField
