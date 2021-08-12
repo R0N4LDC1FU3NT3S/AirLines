@@ -3,21 +3,13 @@ import { withFormik, Form, Field, ErrorMessage } from "formik"
 import Swal from "sweetalert2"
 
 import Nav from "../../Navigations/Nav.jsx"
-import Select from "react-select"
+import Select from "../../Components/Select"
 
 // Styles
 import "./AirLines.scss"
 
-const AirLines = ({ location, handleChange, handleBlur, errors, touched }) => {
+const AirLines = ({ location, handleChange, handleBlur }) => {
 	const path = location.pathname.replace("/", "").replace(/^\w/, c => c.toUpperCase())
-
-	const options = () => {
-		const optionList = []
-		for (let i = 18; i <= 100; i++) {
-			optionList.push({ value: i, label: i })
-		}
-		return optionList
-	}
 
 	return (
 		<>
@@ -34,8 +26,8 @@ const AirLines = ({ location, handleChange, handleBlur, errors, touched }) => {
 						<ErrorMessage name="email">{message => <div className="field-error">{message}</div>}</ErrorMessage>
 						<Field name="cellphone" className="input" type="number" placeholder="Nº Celular" />
 						<ErrorMessage name="cellphone">{message => <div className="field-error">{message}</div>}</ErrorMessage>
-						<Select name="ages" options={options()} placeholder="Edad" onChange={handleChange} error={errors.ages} touched={touched.ages} />
-						<ErrorMessage name="ages">{message => <div className="field-error">{message}</div>}</ErrorMessage>
+						<Select name="age" onChange={handleChange} onBlur={handleBlur} />
+						<ErrorMessage name="age">{message => <div className="field-error">{message}</div>}</ErrorMessage>
 						<button className="button" type="submit">
 							Iniciar sesión
 						</button>
@@ -47,6 +39,7 @@ const AirLines = ({ location, handleChange, handleBlur, errors, touched }) => {
 }
 
 AirLines.propTypes = {
+	location: PropTypes.any,
 	history: PropTypes.any,
 	handleChange: PropTypes.any,
 	handleBlur: PropTypes.any
@@ -58,7 +51,7 @@ export default withFormik({
 			name: "",
 			email: "",
 			cellphone: "",
-			ages: []
+			age: ""
 		}
 	},
 	validate(values) {
@@ -80,16 +73,16 @@ export default withFormik({
 			errors.cellphone = "El numero de celular es requerido*"
 		}
 
-		if (!values.ages) {
-			errors.ages = "La edad es requerida*"
+		if (!values.age) {
+			errors.age = "La edad es requerida*"
 		}
 		return errors
 	},
 	handleSubmit(values, { props, resetForm, setSubmitting }) {
 		setSubmitting(false)
-		const { name, email, cellphone, ages } = values
+		const { name, email, cellphone, age } = values
 
-		console.log({ name, email, cellphone, ages })
+		console.log("Submit", { name, email, cellphone, age })
 
 		let timerInterval
 		Swal.fire({
