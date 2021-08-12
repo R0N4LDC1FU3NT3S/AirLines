@@ -53,22 +53,41 @@ this file will be in charge of creating the image and mounting it for you
 ## Project Structure
 ```
 .
+├── build.sh
 ├── dist
+├── Dockerfile
+├── jest.config.js
 ├── LICENSE
+├── nginx
+|  └── nginx.conf
 ├── package-lock.json
 ├── package.json
 ├── public
+|  ├── capture1.png
+|  ├── capture2.png
+|  ├── capture3.png
+|  ├── capture4.png
+|  ├── capture5.png
 |  └── index.html
+├── README.md
 ├── src
+|  ├── Components
+|  |  └── Select
+|  |     ├── index.js
+|  |     ├── Select.jsx
+|  |     ├── Select.scss
+|  |     ├── Select.test.js
+|  |     └── __snapshots__
+|  |        └── Select.test.js.snap
 |  ├── index.js
 |  ├── index.scss
 |  ├── Layouts
 |  |  ├── AirLines
-|  |  |  ├── AirLines.jsx     
-|  |  |  ├── AirLines.scss    
+|  |  |  ├── AirLines.jsx
+|  |  |  ├── AirLines.scss
 |  |  |  └── index.js
 |  |  ├── Home
-|  |  |  ├── avion.svg        
+|  |  |  ├── avion.svg
 |  |  |  ├── Home.jsx
 |  |  |  ├── Home.scss
 |  |  |  └── index.js
